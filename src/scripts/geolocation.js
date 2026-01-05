@@ -2,7 +2,7 @@ export class GeolocationService {
     static getCurrentPosition() {
         return new Promise((resolve, reject) => {
             if (!navigator.geolocation) {
-                reject(new Error("Геолокация не поддерживается"));
+                reject(new Error('Геолокация не поддерживается'));
                 return;
             }
 
@@ -12,9 +12,9 @@ export class GeolocationService {
                         latitude: position.coords.latitude,
                         longitude: position.coords.longitude,
                     }),
-                (error) => {
-                    reject(new Error("Доступ к геолокации запрещен"));
-                }
+                (_error) => {
+                    reject(new Error('Доступ к геолокации запрещен'));
+                },
             );
         });
     }

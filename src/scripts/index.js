@@ -1,7 +1,7 @@
 import { Timeline } from './timeline.js';
 import { GeolocationService } from './geolocation.js';
 import { CoordinateModal } from './modal.js';
-import '../styles/main.css';
+import '../main.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     const timeline = new Timeline('timeline-container');
